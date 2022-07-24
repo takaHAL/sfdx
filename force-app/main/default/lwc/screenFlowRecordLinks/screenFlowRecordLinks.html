@@ -1,0 +1,13 @@
+<template>
+  <template for:each={records} for:item="record" for:index="idx">
+    <lightning-button
+      key={record.Id}
+      variant="base"
+      label={record.Name}
+      title="Looks like a link"
+      onclick={viewRecord}
+      value={record.Id}
+      class="slds-var-m-left_x-small"
+    ></lightning-button>
+  </template>
+</template>
