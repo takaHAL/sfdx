@@ -1,30 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>AccountProcessor</members>
-        <members>AccountProcessorTest</members>
-        <members>AccountTriggerHandler</members>
-        <members>AccountTriggerTest</members>
-        <members>AccountUtils</members>
-        <members>AddPrimaryContact</members>
-        <members>AddPrimaryContactTest</members>
-        <members>DailyLeadProcessor</members>
-        <members>DailyLeadProcessorTest</members>
-        <members>LeadProcessor</members>
-        <members>LeadProcessorTest</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
-        <members>AccountTrigger</members>
-        <name>ApexTrigger</name>
-    </types>
-    <types>
-        <members>myEverythingComponent</members>
-        <name>AuraDefinitionBundle</name>
-    </types>
-    <types>
-        <members>simpliUIListViews</members>
-        <name>LightningComponentBundle</name>
+        <members>*</members>
+        <name>Profile</name>
     </types>
     <version>53.0</version>
 </Package>
