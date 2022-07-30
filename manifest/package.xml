@@ -6,6 +6,10 @@
     </types>
     <types>
         <members>*</members>
+        <name>RecordType</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>CustomField</name>
     </types>
     <types>
