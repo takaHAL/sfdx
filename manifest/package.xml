@@ -5,10 +5,6 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>Account</members>
-        <name>RecordType</name>
-    </types>
-    <types>
         <members>*</members>
         <name>CustomField</name>
     </types>
