@@ -6,10 +6,10 @@ public with sharing class CsvBatch implements Database.Batchable<SObject>, Datab
     this.objectName = objectName;
   }
 
-  public String objectCsvColumnHeader;
-  public String schemaCsvColumnHeader;
-  public List<String> objectCsvRowValues = new List<String>();
-  public List<String> schemaCsvRowValues = new List<String>();
+  private String objectCsvColumnHeader;
+  private String schemaCsvColumnHeader;
+  private List<String> objectCsvRowValues = new List<String>();
+  private List<String> schemaCsvRowValues = new List<String>();
 
   public Database.QueryLocator start(Database.BatchableContext bc) {
     fields = getFields(objectName);

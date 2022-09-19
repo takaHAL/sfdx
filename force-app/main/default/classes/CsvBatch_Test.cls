@@ -14,6 +14,19 @@ public with sharing class CsvBatch_Test {
     Database.executeBatch(batch);
     Test.stopTest();
 
-    // 検証
+    List<ContentWorkspace> libraries = [
+      SELECT Id, Name
+      FROM ContentWorkspace
+      WHERE Name = 'ApexResults'
+      LIMIT 1
+    ];
+    System.assert(!libraries.isEmpty(), 'library not found');
+
+    List<ContentVersion> documents = [
+      SELECT Title
+      FROM ContentVersion
+      WHERE Title LIKE '%Contact%'
+    ];
+    System.assertEquals(2, documents.size(), 'csv not found');
   }
 }
