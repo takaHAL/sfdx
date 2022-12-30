@@ -1,0 +1,23 @@
+<apex:page>
+  <script
+    type="text/javascript"
+    src="/canvas/sdk/js/55.0/canvas-all.js"
+  ></script>
+  <script>
+    Sfdc.onReady(function () {
+      Sfdc.canvas.controller.publish({
+        name: "mynamespace.world",
+        payload: {
+          status: "world"
+        }
+      });
+    });
+  </script>
+  <apex:canvasApp
+    developerName="canvasAppTest"
+    maxHeight="infinite"
+    width="100%"
+    entityFields="Phone, Name"
+    parameters="{message:'キャンバステスト'}"
+  />
+</apex:page>
