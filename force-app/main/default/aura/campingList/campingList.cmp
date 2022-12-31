@@ -1,0 +1,7 @@
+<aura:component>
+  <ol>
+    <li>虫よけスプレー</li>
+    <li>熊よけスプレー</li>
+    <li>ヤギの餌</li>
+  </ol>
+</aura:component>
