@@ -1,25 +1,28 @@
 <aura:component>
-  <aura:attribute
-    name="Item"
-    type="Camping_Item__c"
-    required="true"
-    default="{Name:'Tent', Price__c:100, Quantity__c:1, Packed__c:false}"
-  />
-  <p>Name:<ui:outputText value="{!v.item.Name}" /></p>
-  <p>
-    Price:<lightning:formattedNumber
-      value="{!v.Item.Price__c}"
-      style="currency"
-    />
-  </p>
-  <p>Quantity:<lightning:formattedNumber value="{!v.Item.Quantity__c}" /></p>
-  <p>
-    <lightning:input
-      type="toggle"
-      label="Packed?"
-      name="Packed"
-      checked="{!v.Item.Packed__c}"
-    />
-  </p>
-  <lightning:button label="パッキング済み!" onclick="{!c.packItem}" />
+  <aura:attribute name="item" type="Camping_Item__c" />
+  <lightning:card title="Camping">
+    <p class="slds-p-horizontal--small">
+      <p>Name:<ui:outputText value="{!v.item.Name}" /></p>
+      <p>
+        Price:<lightning:formattedNumber
+          style="currency"
+          value="{!v.item.Price__c}"
+        />
+      </p>
+      <p>
+        Quantity:<lightning:formattedNumber value="{!v.item.Quantity__c}" />
+      </p>
+      <p>
+        <lightning:button label="パッキング済み!" onclick="{!c.packItem}" />
+      </p>
+      <p>
+        <lightning:input
+          type="checkbox"
+          label="パッキング済み?"
+          name="Packed"
+          checked="{!v.item.Packed__c}"
+        />
+      </p>
+    </p>
+  </lightning:card>
 </aura:component>
