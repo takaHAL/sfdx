@@ -21,5 +21,5 @@
       checked="{!v.Item.Packed__c}"
     />
   </p>
-  <lightning:button label="Packed!" onclick="{!c.packItem}" />
+  <lightning:button label="パッキング済み!" onclick="{!c.packItem}" />
 </aura:component>
