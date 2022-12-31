@@ -1,4 +1,4 @@
-<aura:component>
+<aura:component controller="CampingListController">
   <c:campingHeader />
   <c:campingList />
 </aura:component>
